@@ -18,18 +18,26 @@ h4 {
   @extend %h4;
 }
 
-.font-text {
-  @extend %font-text;
+h5 {
+  @extend %font-section-title;
+}
+
+.font-secondary-text {
+  @extend %font-secondary-text;
 }
 
 .card-font-text {
-  @extend %card-font-text;
-}
-
-.header-font-text {
-  @extend %header-font-text;
+  @extend %font-card-text;
 }
 
 .section-title {
-  @extend %section-nav-title;
+  @extend %font-section-title;
+}
+
+.button {
+  @extend %font-button;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }

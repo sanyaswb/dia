@@ -2,6 +2,7 @@
 <html
   lang="en"
   class="page"
+  data-theme="light-1"
 >
   <head>
     <meta charset="UTF-8" />
@@ -12,7 +13,7 @@
     <title>Dia</title>
     <link
       rel="stylesheet"
-      href="./styles/main.scss"
+      href="./styles/style.scss"
     />
     <script
       type="module"
@@ -20,7 +21,112 @@
       defer
     ></script>
   </head>
-  <body>
-    <h1>Dia</h1>
+  <body class="body">
+    <header class="header">
+      <div class="header__wrapper wrapper grid">
+        <div class="header__top">
+          <div>
+            <a
+              href="#"
+              class="logo header__logo-link"
+            >
+              <img
+                src="./images/logo/dia-logo.svg"
+                alt="headers logo"
+                class="header__logo-img"
+              />
+            </a>
+            <a
+              href="##"
+              class="menu-btn-link"
+            >
+              <div class="menu-btn"></div>
+            </a>
+          </div>
+          <nav class="nav header__nav">
+            <ul class="nav__list">
+              <li>
+                <a
+                  href="#about-us"
+                  class="nav__link"
+                >
+                  about us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#home"
+                  class="nav__link"
+                >
+                  home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#work"
+                  class="nav__link"
+                >
+                  work
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="nav__link"
+                >
+                  services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact-us"
+                  class="nav__link"
+                >
+                  contact us
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <a
+            class="header__hire-us no-wrap-text"
+            href="#hire us"
+          >
+            hire us
+          </a>
+        </div>
+        <div class="header__content grid">
+          <h1 class="header__title">Strategic Agency</h1>
+          <p class="header__text">
+            We believe in the power of bold ideas that can solve business
+            challenges.
+          </p>
+          <div class="header__button">
+            <button class="button">learn more</button>
+          </div>
+        </div>
+      </div>
+      <section class="header__hero hero">
+        <div class="hero__container">
+          <div class="hero__content">
+            <div class="hero__slider-buttons">
+              <div class="slider-button"></div>
+              <div class="hero__slider-button--right slider-button"></div>
+            </div>
+            <div>
+              <h5 class="hero__title">intro</h5>
+              <p class="hero__text">
+                By the same illusion which lifts the horizon.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main class="main">
+      <div class="main__wrapper"></div>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper"></div>
+    </footer>
   </body>
 </html>

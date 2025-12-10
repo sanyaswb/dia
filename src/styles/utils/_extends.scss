@@ -39,7 +39,7 @@
   color: $font-color-title;
 }
 
-%font-text {
+%font-secondary-text {
   font-family: OpenSans, sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -47,7 +47,7 @@
   color: $font-color-secondary;
 }
 
-%card-font-text {
+%font-card-text {
   font-family: OpenSans, sans-serif;
   font-weight: 600;
   font-size: 13px;
@@ -55,7 +55,7 @@
   color: $font-color-secondary;
 }
 
-%header-font-text {
+%font-header-text {
   font-family: OpenSans, sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -63,10 +63,28 @@
   color: $font-color-primary;
 }
 
-%section-nav-title {
+%font-section-title {
+  font-family: Poppins, sans-serif;
   font-weight: 700;
   font-size: var(--nav-font-size);
   line-height: 100%;
   letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+%font-nav {
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  font-size: var(--nav-font-size);
+  line-height: 150%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+%font-button {
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0;
 }

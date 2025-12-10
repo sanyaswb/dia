@@ -5,15 +5,13 @@
   --bg-svg-icon-hover: #2060f6;
   --button-page-radius: 8px;
   --header-border-radius: 30px;
-  --footer-border-radius: 30px;
-  --section-radius: 30px;
+  --border-radius: 30px;
   --nav-font-size: 13px;
   --h1-size: 52px;
   --h2-size: 44px;
   --h3-size: 32px;
   --h4-size: 20px;
   --text-size: 22px;
-  --page-inline-padding: 20px;
 }
 
 html[data-theme='light'] {
@@ -23,6 +21,5 @@ html[data-theme='light'] {
   --bg-svg-icon-hover: #d2ebff;
   --button-page-radius: 64px;
   --header-border-radius: 200px;
-  --footer-border-radius: 200px;
-  --section-radius: 0;
+  --border-radius: 0;
 }

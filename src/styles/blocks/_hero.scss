@@ -1,0 +1,62 @@
+.hero {
+  height: 390px;
+  background-image: url(../images/slider/slide-img-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+
+  @include on-desktop-s {
+    height: 680px;
+
+    border-radius: var(--header-border-radius) 0 var(--border-radius) 0;
+  }
+
+  &__container {
+    grid-column: 1 / -1;
+    display: grid;
+
+    @include adaptive-padding(
+      0 20px 24px 20px,
+      $tablet: 0 41px 32px 41px,
+      $desktop-s: 0 0 48px 78px,
+      $design: 0 0 48px 48px
+    );
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    max-width: 280px;
+    gap: 16px;
+
+    @include on-desktop-s {
+      flex-direction: row;
+      align-items: center;
+      max-width: 370px;
+      gap: 24px;
+    }
+  }
+
+  &__slider {
+    &-buttons {
+      display: flex;
+      gap: 16px;
+    }
+
+    &-button--right {
+      transform: scale(-1);
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    @extend %font-secondary-text;
+
+    color: $font-color-primary;
+  }
+}

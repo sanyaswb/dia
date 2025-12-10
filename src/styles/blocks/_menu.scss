@@ -1,0 +1,13 @@
+.menu {
+  &-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+
+    @include on-desktop-s {
+      display: none;
+    }
+  }
+}

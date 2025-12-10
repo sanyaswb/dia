@@ -17,12 +17,6 @@
   }
 }
 
-@mixin on-desktop {
-  @media (min-width: $desktop-min-width) {
-    @content;
-  }
-}
-
 @mixin on-desktop-s {
   @media (min-width: $desktop-s-min-width) {
     @content;
@@ -64,13 +58,9 @@
 
     column-gap: $min-column-gap;
   }
-}
 
-@mixin page-inline-padding {
-  @include on-tablet {
-    :root {
-      --inline-padding: 41px;
-    }
+  @include on-design {
+    column-gap: $max-column-gap;
   }
 }
 
@@ -80,5 +70,50 @@
 
   @include on-tablet {
     padding-top: 148px;
+  }
+}
+
+@mixin adaptive-padding(
+  $base: null,
+  $tablet: null,
+  $desktop-s: null,
+  $desktop: null,
+  $design: null,
+  $large: null
+) {
+  @if $base {
+    padding: $base;
+  } @else {
+    padding: 0 $def-inline-padding;
+  }
+
+  @if $tablet {
+    @include on-tablet {
+      padding: $tablet;
+    }
+  }
+
+  @if $desktop-s {
+    @include on-desktop-s {
+      padding: $desktop-s;
+    }
+  }
+
+  @if $desktop {
+    @include on-design {
+      padding: $desktop;
+    }
+  }
+
+  @if $design {
+    @include on-design {
+      padding: $design;
+    }
+  }
+
+  @if $large {
+    @include on-large {
+      padding: $large;
+    }
   }
 }

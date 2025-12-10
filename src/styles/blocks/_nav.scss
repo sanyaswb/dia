@@ -1,0 +1,17 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    height: 100%;
+
+    & > li {
+      height: 100%;
+    }
+  }
+
+  &__link {
+    align-items: center;
+    height: 100%;
+  }
+}

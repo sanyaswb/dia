@@ -1,7 +1,3 @@
 .page {
-  padding-inline: var(--page-inline-padding);
-
-  @include on-tablet {
-    --page-inline-padding: 41px;
-  }
+  min-width: $min-width;
 }

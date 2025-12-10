@@ -1,0 +1,9 @@
+.main {
+  &__wrapper {
+    @include adaptive-padding(
+      120px 20px 192px 20px,
+      $tablet: 148px 41px 200px 41px,
+      $desktop-s: 148px 41px 198px 41px
+    );
+  }
+}
