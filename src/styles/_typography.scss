@@ -22,8 +22,26 @@ h5 {
   @extend %font-section-title;
 }
 
-.card-font-text {
-  @extend %font-card-text;
+button {
+  @extend %button;
+}
+
+input {
+  @extend %input-placeholder;
+
+  color: $white;
+
+  &:focus {
+    opacity: 1;
+  }
+}
+
+nav {
+  @extend %font-nav;
+}
+
+input::placeholder {
+  @extend %input-placeholder;
 }
 
 .section-title {

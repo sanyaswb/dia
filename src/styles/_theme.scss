@@ -1,8 +1,9 @@
 :root {
-  --bg-header: #2c2c2c;
+  --bg-secondary: #2c2c2c;
   --bg-button-page: #2060f6;
   --bg-button-form: #144ed4;
   --bg-svg-icon-hover: #2060f6;
+  --bg-border-form: #144ed4;
   --bg-card-1: rgba(32, 96, 246, 0.1);
   --bg-card-2: rgba(32, 96, 246, 0.1);
   --bg-card-3: rgba(32, 96, 246, 0.1);
@@ -11,8 +12,13 @@
   --color-card-2: #2060f6;
   --color-card-3: #2060f6;
   --color-card-4: #2060f6;
+  --shapes-color-1: #2060f6;
+  --shapes-color-2: #2060f6;
+  --shapes-color-3: #2060f6;
+  --shapes-color-4: #2060f6;
+  --shapes-color-5: #2060f6;
   --button-page-radius: 8px;
-  --header-border-radius: 30px;
+  --big-border-radius: 30px;
   --border-radius: 30px;
   --nav-font-size: 13px;
   --h1-size: 52px;
@@ -20,13 +26,18 @@
   --h3-size: 32px;
   --h4-size: 20px;
   --text-size: 22px;
+  --st-miterlimit-1: 6;
+  --st-miterlimit-2: 8;
+  --st-miterlimit-3: 10;
+  --st-miterlimit-4: 12;
 }
 
 html[data-theme='light'] {
-  --bg-header: #008aff;
+  --bg-secondary: #008aff;
   --bg-button-page: #ff9c8e;
   --bg-button-form: #ff7e6c;
   --bg-svg-icon-hover: #d2ebff;
+  --bg-border-form: #fff;
   --bg-card-1: rgb(86, 204, 242, 0.1);
   --bg-card-2: rgb(252, 201, 29, 0.1);
   --bg-card-3: rgb(21, 216, 80, 0.1);
@@ -35,7 +46,16 @@ html[data-theme='light'] {
   --color-card-2: #fcc91d;
   --color-card-3: #15d850;
   --color-card-4: #f36363;
+  --shapes-color-1: #f25656;
+  --shapes-color-2: #fcc304;
+  --shapes-color-3: #03d542;
+  --shapes-color-4: #56ccf2;
+  --shapes-color-5: #bc04fc;
   --button-page-radius: 64px;
-  --header-border-radius: 200px;
+  --big-border-radius: 200px;
   --border-radius: 0;
+  --st-miterlimit-1: 8;
+  --st-miterlimit-2: 12;
+  --st-miterlimit-3: 17;
+  --st-miterlimit-4: 25;
 }
