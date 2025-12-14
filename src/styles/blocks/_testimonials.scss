@@ -1,0 +1,43 @@
+.testimonials {
+  grid-row: 48px;
+
+  @include adaptive-padding(
+    0 20px 120px 20px,
+    $tablet: 0 41px 148px 41px,
+    $desktop-s: 0 54px 186px 54px,
+    $design: 0 54px 148px 54px
+  );
+
+  &__top {
+    grid-column: 1 / -1;
+  }
+
+  &__section-title {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin-bottom: 48px;
+
+    @include on-tablet {
+      max-width: 202px;
+      margin-bottom: 56px;
+    }
+
+    @include on-desktop-s {
+      margin-bottom: 85px;
+    }
+  }
+
+  &__content {
+    grid-column: 1 / -1;
+    row-gap: 24px;
+  }
+  &__card {
+    grid-column: 1 / -1;
+
+    @include on-desktop-s {
+      grid-column: span 4;
+    }
+  }
+}

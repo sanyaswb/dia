@@ -1,0 +1,76 @@
+.division {
+  background-color: $white;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 120px;
+
+  @include on-tablet {
+    margin-bottom: 0;
+  }
+
+  @include on-desktop-s {
+    height: 700px;
+  }
+
+  &__wrapper {
+    text-align: center;
+
+    @include adaptive-padding(
+      72px 20px 72px 20px,
+      $tablet: 200px 41px 200px 41px,
+      $desktop-s: 200px 54px 200px 54px
+    );
+  }
+
+  &__background {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    @include on-tablet {
+      transform: translate(-50%, -50%) scale(0.66);
+    }
+
+    @include on-desktop-s {
+      transform: translate(-50%, -54%) scale(0.9);
+    }
+
+    @include on-design {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  &__shapes {
+    display: block;
+  }
+
+  &__content {
+    grid-column: 1 / -1;
+    max-width: 754px;
+    place-self: center;
+
+    & > h2 {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__description {
+    @extend %font-description;
+
+    margin-bottom: 56px;
+
+    @include on-tablet {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__button {
+    place-self: center;
+    width: 100%;
+
+    @include on-tablet {
+      width: 264px;
+    }
+  }
+}
