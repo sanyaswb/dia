@@ -27,23 +27,42 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(1);
+
+    --parallax-x: 0px;
+    --parallax-y: 0px;
+
+    will-change: transform;
+    transition: transform 0.1s linear;
+
+    transform: translate(
+        calc(-50% + var(--parallax-x)),
+        calc(-50% + var(--parallax-y))
+      )
+      scale(1);
 
     @include on-tablet {
-      transform: translate(-50%, -50%) scale(0.66);
+      transform: translate(
+          calc(-50% + var(--parallax-x)),
+          calc(-50% + var(--parallax-y))
+        )
+        scale(0.66);
     }
 
     @include on-desktop-s {
-      transform: translate(-50%, -54%) scale(0.9);
+      transform: translate(
+          calc(-50% + var(--parallax-x)),
+          calc(-54% + var(--parallax-y))
+        )
+        scale(0.9);
     }
 
     @include on-design {
-      transform: translate(-50%, -50%) scale(1);
+      transform: translate(
+          calc(-50% + var(--parallax-x)),
+          calc(-50% + var(--parallax-y))
+        )
+        scale(1);
     }
-  }
-
-  &__shapes {
-    display: block;
   }
 
   &__content {

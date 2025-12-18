@@ -38,6 +38,10 @@
   @include on-desktop-s {
     @include hover(background-color, var(--bg-button-form));
   }
+
+  transition:
+    background-color $my-duration,
+    border-radius $my-duration;
 }
 
 .slider-button {
@@ -466,5 +470,50 @@
   &__input {
     position: absolute;
     width: 100%;
+  }
+}
+
+.switcher {
+  --base-rotate: 0deg;
+  --hover-rotate: 0deg;
+
+  fill: var(--bg-switcher);
+
+  transform: rotate(calc(var(--base-rotate) + var(--hover-rotate)));
+  transition:
+    transform $my-duration,
+    fill $my-duration;
+
+  &-link {
+    display: flex;
+    height: 23px;
+    width: 23px;
+    margin-right: 32px;
+  }
+
+  &__image {
+    &-path-1 {
+      transition: fill $my-duration;
+
+      fill: var(--bg-switcher);
+    }
+  }
+
+  &__circle {
+    fill: none;
+  }
+}
+
+html[data-theme] .switcher {
+  --base-rotate: 180deg;
+}
+
+@include on-desktop-s {
+  html:not([data-theme]) .switcher:hover {
+    --hover-rotate: 25deg;
+  }
+
+  html[data-theme] .switcher:hover {
+    --hover-rotate: -25deg;
   }
 }

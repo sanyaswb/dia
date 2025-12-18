@@ -1,6 +1,7 @@
 .hero {
   height: 390px;
   border-radius: 30px;
+  transition: border-radius $my-duration;
 
   @include background-config(url(../images/slider/slide-img-1.jpg));
 

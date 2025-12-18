@@ -1,4 +1,5 @@
 :root {
+  --bg-switcher: #fff;
   --bg-secondary: #2c2c2c;
   --bg-button-page: #2060f6;
   --bg-button-form: #144ed4;
@@ -38,6 +39,7 @@
 }
 
 html[data-theme='light'] {
+  --bg-switcher: #ff9c8e;
   --bg-secondary: #008aff;
   --bg-button-page: #ff9c8e;
   --bg-button-form: #ff7e6c;

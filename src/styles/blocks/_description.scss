@@ -8,7 +8,24 @@
     $desktop-s: 148px 54px 148px 54px
   );
 
+  &__title,
+  &__text {
+    --reveal-duration: 0.6s;
+    --reveal-delay: 0s;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+      opacity var(--reveal-duration) ease,
+      transform var(--reveal-duration) ease;
+
+    will-change: opacity, transform;
+  }
+
   &__title {
+    --reveal-delay: 0s;
+
     grid-column: 1 / -1;
 
     margin-bottom: 24px;
@@ -19,6 +36,8 @@
   }
 
   &__text {
+    --reveal-delay: 0.15s;
+
     grid-column: 1 / -1;
 
     @include on-desktop-s {
@@ -32,5 +51,12 @@
     }
 
     @extend %font-description;
+  }
+
+  &__title.is-visible,
+  &__text.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: var(--reveal-delay);
   }
 }

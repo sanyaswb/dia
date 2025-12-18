@@ -1,11 +1,15 @@
 .header {
   background-color: var(--bg-secondary);
-  border-radius: 0 0 30px var(--big-border-radius);
+  border-radius: 0 0 30px 30px;
+  transition:
+    background-color $my-duration,
+    border-radius $my-duration;
 
   @include on-desktop-s {
     display: grid;
     grid-template-rows: 120px 680px;
     grid-template-columns: 1fr minmax(502px, 1fr);
+    border-radius: 0 0 30px var(--big-border-radius);
   }
 
   &__wrapper {
@@ -39,6 +43,12 @@
     @include on-desktop-s {
       margin-bottom: 158px;
     }
+  }
+
+  &__nav-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
 
   &__content {
@@ -84,6 +94,7 @@
       width: 100%;
       background-color: var(--bg-button-page);
       border-radius: 4px;
+      transition: background-color $my-duration;
     }
   }
 
