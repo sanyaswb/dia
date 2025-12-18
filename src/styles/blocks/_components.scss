@@ -125,6 +125,11 @@
       justify-content: center;
       border-radius: 23px;
       width: 46px;
+      transition: background-color $my-duration;
+
+      & span {
+        transition: color $my-duration;
+      }
 
       margin-bottom: 24px;
     }
@@ -182,7 +187,9 @@
       height: 40px;
       aspect-ratio: 1 / 1;
       margin-right: 16px;
-      transition: transform $my-duration;
+      transition:
+        transform $my-duration,
+        background-color $my-duration;
 
       &-image {
         height: 16px;
@@ -283,7 +290,9 @@
         height: 108.98px;
         width: 43.9px;
         border-radius: 12px;
-        transition: transform $my-duration;
+        transition:
+          transform $my-duration,
+          background-color $my-duration;
 
         @include on-tablet {
           height: 139px;
@@ -350,6 +359,10 @@
         margin-bottom: 8px;
       }
 
+      & path {
+        transition: fill $my-duration;
+      }
+
       &--1 {
         & path {
           fill: var(--color-card-1);
@@ -397,6 +410,10 @@
 
 .shapes {
   opacity: 0.5;
+
+  & rect {
+    transition: all $my-duration;
+  }
 
   &__st-width--1 {
     fill: none;
@@ -504,6 +521,10 @@
   }
 }
 
+.svg-icon-socials {
+  fill: $white;
+}
+
 html[data-theme] .switcher {
   --base-rotate: 180deg;
 }
@@ -533,9 +554,9 @@ html[data-theme] .switcher {
   visibility: hidden;
   transform: translateY(20px);
   transition:
-    opacity 0.3s ease,
-    transform 0.3s ease,
-    visibility 0.3s ease;
+    opacity $my-duration,
+    transform $my-duration,
+    visibility $my-duration;
 
   @include on-tablet {
     width: 52px;
@@ -551,7 +572,7 @@ html[data-theme] .switcher {
     width: 2px;
     height: 10px;
     background-color: var(--bg-button-page);
-    transition: background-color 0.3s;
+    transition: background-color $my-duration;
   }
 
   &::before {

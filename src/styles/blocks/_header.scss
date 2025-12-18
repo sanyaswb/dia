@@ -83,6 +83,7 @@
     }
 
     &.top-bg::before {
+      transition: background-color $my-duration;
       opacity: 0.8;
       pointer-events: auto;
     }
@@ -203,8 +204,9 @@
     }
   }
 
-  &__menu-btn {
+  &__menu-button {
     padding-block: 10px;
+
     @include on-desktop-s {
       display: none;
     }
