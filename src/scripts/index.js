@@ -16,7 +16,7 @@ switcher.addEventListener('click', () => {
   }
 });
 
-//-----------------
+//----------------
 
 const section = document.querySelector('.division');
 const background = section.querySelector('.division__background');
