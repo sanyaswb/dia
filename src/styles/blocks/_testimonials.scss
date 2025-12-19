@@ -82,22 +82,24 @@
 
     &-image {
       &--1 {
+        // background-image: url(../images/testimonials/testimonial-ava-1.webp);
+
         @include background-config(
-          url(../images/testimonials/testimonial-ava-1.webp),
           $position: top
         );
       }
 
       &--2 {
+        // background-image: url(../images/testimonials/testimonial-ava-2.webp);
         @include background-config(
-          url(../images/testimonials/testimonial-ava-2.webp),
           $position: top
         );
       }
 
       &--3 {
+        // background-image: url(../images/testimonials/testimonial-ava-3.webp);
+
         @include background-config(
-          url(../images/testimonials/testimonial-ava-3.webp),
           $position: top
         );
       }

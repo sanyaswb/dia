@@ -52,7 +52,7 @@
     @include on-desktop-s {
       &:hover p {
         transition: color $my-duration;
-        color: $blue-hover;
+        color: var(--bg-svg-icon-hover);
       }
     }
 

@@ -1,52 +1,26 @@
 {
-  "name": "dia",
+  "name": "layout_dia",
   "version": "1.0.0",
-  "description": "Dia landing page",
+  "description": "layout_dia",
+  "source": "src/index.html",
   "scripts": {
-    "init": "mate-scripts init",
-    "start": "mate-scripts start",
-    "style-format": "npx stylelint 'src/**/*.scss' --fix --allow-empty-input",
-    "format": "prettier --ignore-path .prettierignore --write './src/**/*.{html,css,scss}'",
-    "lint": "npm run style-format && npm run format && mate-scripts lint",
-    "test:only": "mate-scripts test",
-    "build": "mate-scripts build",
-    "deploy": "mate-scripts deploy",
-    "update": "mate-scripts update",
-    "postinstall": "npm run update",
-    "test": "npm run lint && npm run test:only"
+    "start": "parcel --open",
+    "build": "rm -rf dist .parcel-cache && parcel build src/index.html --public-url ./",
+    "deploy": "npm run build && npx gh-pages -d dist"
   },
-  "keywords": [],
-  "author": "Mate Academy",
-  "license": "GPL-3.0",
+  "staticFiles": {
+    "staticPath": "src/images",
+    "staticOutDir": "images"
+  },
+  "homepage": "https://github.com/sanyaswb/layout_dia#readme",
   "devDependencies": {
-    "@linthtml/linthtml": "^0.9.6",
-    "@mate-academy/bemlint": "latest",
-    "@mate-academy/linthtml-config": "latest",
-    "@mate-academy/scripts": "^2.1.2",
-    "@mate-academy/stylelint-config": "latest",
-    "@parcel/transformer-sass": "^2.16.1",
-    "glob": "^13.0.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "parcel": "^2.16.1",
-    "prettier": "^3.3.2",
-    "sass": "latest",
-    "stylelint": "^16.7.0",
-    "stylelint-scss": "^6.4.1",
-    "ttf2woff": "^3.0.0",
-    "ttf2woff2": "^8.0.0"
-  },
-  "mateAcademy": {
-    "projectType": "layout",
-    "linters": {
-      "javascript": false,
-      "bem": false
-    },
-    "tests": {
-      "backstop": false
-    }
+    "@parcel/transformer-sass": "^2.16.3",
+    "parcel": "^2.16.3",
+    "parcel-reporter-static-files-copy": "^1.5.3",
+    "sass": "^1.97.0"
   },
   "dependencies": {
-    "cheerio": "^1.1.2"
+    "puppeteer": "^24.34.0",
+    "sharp": "^0.34.5"
   }
 }
