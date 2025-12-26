@@ -75,3 +75,17 @@ html[data-theme="light"] {
     opacity: 1;
   }
 }
+
+html[data-theme] .switcher {
+  --base-rotate: 180deg;
+}
+
+@include on-desktop-s {
+  html:not([data-theme]) .switcher:hover {
+    --hover-rotate: 25deg;
+  }
+
+  html[data-theme] .switcher:hover {
+    --hover-rotate: -25deg;
+  }
+}

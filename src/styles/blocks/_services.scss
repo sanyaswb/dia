@@ -26,6 +26,8 @@
   }
 
   &__cards {
+    --reveal-delay: 0.4s;
+
     grid-column: 1 / -1;
     display: flex;
     flex-direction: column;

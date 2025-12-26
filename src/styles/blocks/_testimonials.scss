@@ -30,6 +30,8 @@
   }
 
   &__content {
+    --reveal-delay: 0.2s;
+
     grid-column: 1 / -1;
     row-gap: 24px;
   }

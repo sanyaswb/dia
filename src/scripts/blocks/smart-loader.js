@@ -1,18 +1,7 @@
-/**
- * SmartLoader v9.5 (Instant Load)
- * * -------------------------------------------------------------------------
- * ІНСТРУКЦІЯ: ЯК НАЛАШТУВАТИ PARCEL
- * -------------------------------------------------------------------------
- * 1. npm install -D parcel-reporter-static-files-copy
- * 2. .parcelrc: { "extends": "@parcel/config-default", "reporters": ["...", "parcel-reporter-static-files-copy"] }
- * 3. package.json: "staticFiles": { "staticPath": "src/images", "staticOutDir": "images" }
- * 4. npm start
- * -------------------------------------------------------------------------
- */
+// SmartLoader v9.5 (Instant Load)
 
-// (CONFIG)
 const APP_CONFIG = {
-  USE_PARCEL: true, // true -> dist (Parcel), false -> src (Live Server)
+  USE_PARCEL: true,
 
   PATHS: {
     parcel: "./",
@@ -22,7 +11,7 @@ const APP_CONFIG = {
   FORCE_WEBP_LOW_RES: true,
 
   UI: {
-    ENABLE_BLUR: false, // true: увімкнути розмиття, false: вимкнути (буде просто скелетон -> чітка картинка)
+    ENABLE_BLUR: false,
     SKELETON: {
       BASE_COLOR: "#e0e0e0",
       SHIMMER_COLOR: "rgba(111, 111, 111, 0.5)",
@@ -157,7 +146,6 @@ class SmartLoader {
   async loadHighRes() {
     const promises = this.tasks.map((task) => this._preloadSingleImage(task));
     await Promise.all(promises);
-    console.log("🎉 SmartLoader: Всі зображення завантажено.");
   }
 
   _preloadSingleImage(task) {
