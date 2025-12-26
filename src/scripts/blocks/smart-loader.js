@@ -30,11 +30,11 @@ class SmartLoader {
 
     this._injectStyles();
 
-    console.log(
-      `🔧 SmartLoader v9.4 (Instant). Mode: ${
-        APP_CONFIG.USE_PARCEL ? "Parcel" : "Vanilla"
-      }`
-    );
+    // console.log(
+    //   `🔧 SmartLoader v9.4 (Instant). Mode: ${
+    //     APP_CONFIG.USE_PARCEL ? "Parcel" : "Vanilla"
+    //   }`
+    // );
   }
 
   _injectStyles() {
